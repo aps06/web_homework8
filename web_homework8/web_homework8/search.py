@@ -3,9 +3,9 @@ from mongoengine import connect
 from models import Authors, Quotes
 
 connect(
-    db="web_homework_8",
-    host="mongodb+srv://taras:JB318HALN4XRIQM8@cluster0.ewzxsj8.mongodb.net/web_homework_8?retryWrites=true&w=majority&appName=Cluster0",
-)
+    db="testdb",
+    host="mongodb://localhost:27017/testdb"
+    )
 
 
 def search_by_author(name):
