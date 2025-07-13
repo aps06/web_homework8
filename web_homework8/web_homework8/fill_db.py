@@ -9,9 +9,8 @@ connect(
 )
 
 
-with open("authors.json", "r", encoding="utf-8") as f:
+with open("data/authors.json", "r", encoding="utf-8") as f:
     authors_list = json.load(f)
-
 for item in authors_list:
     author = Authors(
         fullname=item.get("fullname"),
@@ -20,9 +19,8 @@ for item in authors_list:
         description=item.get("description"),
     )
     author.save()
-with open("quotes.json", "r", encoding="utf-8") as f:
+with open("data/quotes.json", "r", encoding="utf-8") as f:
     quotes_list = json.load(f)
-
 for item in quotes_list:
     author_name = item.get("author")
     author = Authors.objects(fullname=author_name).first()
