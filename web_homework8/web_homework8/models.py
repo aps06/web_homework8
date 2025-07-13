@@ -20,7 +20,7 @@ class Quotes(Document):
     qoute = StringField()
 
     meta = {
-        "collection": "qoutes",
+        "collection": "quotes",
         "indexes": ["author", "tags"],
     }
 

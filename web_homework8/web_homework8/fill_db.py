@@ -28,7 +28,7 @@ for item in quotes_list:
         quote = Quotes(
             tags=item.get("tags", []),
             author=author,
-            qoute=item.get("qoute"),
+            qoute=item.get("quote"),
         )
         quote.save()
     else:
